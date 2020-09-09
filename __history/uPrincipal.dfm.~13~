@@ -1,0 +1,100 @@
+object frmCronometro: TfrmCronometro
+  Left = 0
+  Top = 0
+  Caption = 'Cronometro PC'
+  ClientHeight = 400
+  ClientWidth = 778
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 264
+    Top = 40
+    Width = 160
+    Height = 48
+    Caption = '00:00:00'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -40
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Button1: TButton
+    Left = 32
+    Top = 254
+    Width = 75
+    Height = 25
+    Caption = '&Incio'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object memDados: TMemo
+    Left = 567
+    Top = 40
+    Width = 203
+    Height = 161
+    ScrollBars = ssVertical
+    TabOrder = 1
+  end
+  object edtSolicitacao: TEdit
+    Left = 41
+    Top = 310
+    Width = 208
+    Height = 21
+    TabOrder = 2
+    Visible = False
+  end
+  object btnPause: TButton
+    Left = 113
+    Top = 254
+    Width = 75
+    Height = 25
+    Caption = 'Pa&use'
+    TabOrder = 3
+  end
+  object btnSalvar: TButton
+    Left = 282
+    Top = 254
+    Width = 75
+    Height = 25
+    Caption = 'Salvar'
+    TabOrder = 4
+  end
+  object btnStop: TButton
+    Left = 194
+    Top = 254
+    Width = 75
+    Height = 25
+    Caption = 'Parar'
+    TabOrder = 5
+    OnClick = btnStopClick
+  end
+  object grpTempo: TGroupBox
+    Left = 224
+    Top = 8
+    Width = 261
+    Height = 105
+    Caption = 'Tempo Decorrido'
+    TabOrder = 6
+  end
+  object edtNome: TEdit
+    Left = 520
+    Top = 248
+    Width = 121
+    Height = 21
+    TabOrder = 7
+  end
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    Left = 288
+    Top = 160
+  end
+end
